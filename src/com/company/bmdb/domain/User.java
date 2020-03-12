@@ -8,6 +8,17 @@ public class User {
     private String password;
     ArrayList<Review> reviews;
 
+    public User() {
+        reviews = new ArrayList<Review>();
+    }
+
+    public User(String name, String email, String password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        reviews = new ArrayList<Review>();
+    }
+
     public String getName() {
         return name;
     }
