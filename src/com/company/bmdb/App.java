@@ -39,7 +39,7 @@ public class App {
             createUser();
         }
         view.printWelcomeMessage(currentUser);
-        Boolean endProgram = false;
+        boolean endProgram = false;
         do {
             view.printMedias(medias);
             try {
@@ -58,24 +58,16 @@ public class App {
 
     private void createUser() {
         Scanner sc = new Scanner(System.in);
-        User newUser = new User();
-        System.out.println("You are not registered yet.\n\nPlease select a username:\n");
-        newUser.setName(sc.nextLine());
-        System.out.println("Email address:\n");
-        newUser.setEmail(sc.nextLine());
-        System.out.println("Password:\n");
-        newUser.setPassword(sc.nextLine());
-        // TODO: Use service to save user
+        User newUser = view.getUserDetails();
         service.saveUser(newUser, users);
         currentUser = newUser;
-        System.out.println("Now you're good to go!\n");
     }
 
     private void doReview() {
-        Media chosenMedia = view.printChooseMedia(medias);
-        Review userReview = view.printCreateReview(chosenMedia, currentUser);
-        service.saveReview(chosenMedia, userReview);
-        printReviewAverage(chosenMedia);
+        selectedMedia = view.printChooseMedia(medias);
+        review = view.printCreateReview(selectedMedia, currentUser);
+        service.saveReview(selectedMedia, review);
+        printReviewAverage(selectedMedia);
         if (!view.printContinue()) {
             throw new UserWantsToQuitException();
         }
@@ -93,7 +85,4 @@ public class App {
 
         System.out.println(String.format("Average of reviews: %s", avg));
     }
-
-    // TODO: Add private functions (creatuser, doreview, printreviewaverage)
-
 }

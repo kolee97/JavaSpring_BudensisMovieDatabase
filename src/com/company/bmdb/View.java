@@ -93,6 +93,18 @@ public class View {
             return false;
     }
 
+    public User getUserDetails() {
+        User newUser = new User();
+        System.out.println("You are not registered yet.\nPlease select a username:\n");
+        newUser.setName(sc.nextLine());
+        System.out.println("Email address:\n");
+        newUser.setEmail(sc.nextLine());
+        System.out.println("Password:\n");
+        newUser.setPassword(sc.nextLine());
+        System.out.println("Now you're good to go!\n");
+        return newUser;
+    }
+
     private Rating convertRating(String rating) {
         switch (rating.toLowerCase()) {
             case "bad":
