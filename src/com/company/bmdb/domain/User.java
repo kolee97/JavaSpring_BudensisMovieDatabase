@@ -6,7 +6,8 @@ public class User {
     private String name;
     private String email;
     private String password;
-    ArrayList<Review> reviews;
+
+    public ArrayList<Review> reviews;
 
     public User() {
         reviews = new ArrayList<Review>();

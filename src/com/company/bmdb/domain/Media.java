@@ -8,8 +8,9 @@ public class Media {
     private String title;
     private String description;
     private LocalDate premier;
-    ArrayList<Review> reviews;
-    ArrayList<Actor> cast;
+
+    public ArrayList<Review> reviews;
+    public ArrayList<Actor> cast;
 
     public long getId() {
         return id;
