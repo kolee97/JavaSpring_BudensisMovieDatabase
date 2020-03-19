@@ -1,4 +1,4 @@
-package com.company.bmdb.domain;
+package com.example.domain;
 
 public class Series extends Media {
 }

@@ -1,8 +1,9 @@
-package com.company.bmdb;
+package com.example.app;
 
-import com.company.bmdb.domain.*;
-import com.company.bmdb.exceptions.MediaNotFoundException;
-import com.company.bmdb.exceptions.UserNotFoundException;
+import com.example.domain.*;
+import com.example.service.exceptions.MediaNotFoundException;
+import com.example.service.exceptions.UserNotFoundException;
+//import com.example.domain.*;
 
 import java.util.ArrayList;
 import java.util.List;

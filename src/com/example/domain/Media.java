@@ -1,4 +1,4 @@
-package com.company.bmdb.domain;
+package com.example.domain;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

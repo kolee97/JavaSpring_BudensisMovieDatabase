@@ -1,9 +1,7 @@
-package com.company.bmdb;
+package com.example.app;
 
-import com.company.bmdb.domain.User;
-import com.company.bmdb.exceptions.UserNotFoundException;
-
-import java.util.ArrayList;
+import com.example.service.App;
+import com.example.service.Service;
 
 public class Main {
 

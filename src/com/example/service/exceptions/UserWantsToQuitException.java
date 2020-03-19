@@ -1,4 +1,4 @@
-package com.company.bmdb.exceptions;
+package com.example.service.exceptions;
 
 public class UserWantsToQuitException extends RuntimeException {
 }

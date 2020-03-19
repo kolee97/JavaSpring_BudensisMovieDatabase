@@ -1,9 +1,9 @@
-package com.company.bmdb;
+package com.example.service;
 
-import com.company.bmdb.domain.Media;
-import com.company.bmdb.domain.Review;
-import com.company.bmdb.domain.User;
-import com.company.bmdb.exceptions.UserNotFoundException;
+import com.example.service.exceptions.UserNotFoundException;
+import com.example.domain.Media;
+import com.example.domain.Review;
+import com.example.domain.User;
 
 import java.util.ArrayList;
 import java.util.List;
